@@ -8,6 +8,8 @@ from datetime import date, datetime
 import paho.mqtt.client as paho
 broker="192.168.5.12"
 port=1883
+dbcfile="/home/pi/pylontech.dbc"
+caninterface="can0"
 
 def on_publish(client,userdata,result):             #create function for callback
     print("mqtt published")
@@ -166,8 +168,8 @@ ret = client1.publish( str(sensor_topic_template).replace("*","Discharge_Current
                       (str(sensor_value_template).replace("*","Discharge_Current_Limitation")).replace("#","BMS_DC_Parameter").replace("&",BMS_parameters))
                       
 
-db = cantools.database.load_file('pylontech.dbc')
-can_bus = can.interface.Bus('can0', bustype='socketcan')
+db = cantools.database.load_file(dbcfile)
+can_bus = can.interface.Bus(caninterface, bustype='socketcan')
 
 while 1:
   message = can_bus.recv()
