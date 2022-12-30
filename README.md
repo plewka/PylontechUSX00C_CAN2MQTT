@@ -44,7 +44,7 @@ When the script starts up again (used a service at linux) they are back again, t
 # File use on ha server
 * template.yaml - after modification of ha.yaml located in main directory, edited with ha's file editor 
 * example.yaml - sniplet from one of my solar dashboards 
-* battery.png - how it looks inside my ha
+* ha_pylontech_screenshoot.png - how it looks inside my ha
 
 # Credits
 Direct thanks to the guys who did OpenDTU for the Hoymiles HM-xxxx solar inverters which I studied
