@@ -10,7 +10,7 @@ messages as MQTT. It doesn't do any comfort or error handling. You even have to 
 the MQTT host into the file (not a parameter).
 
 Pylontech uses CAN with 500.000 bps by default. You can view the CAN messages comming to 
-the interface using: 
+the interface using
 
 * sudo ip link set can0 up type can bitrate 500000
 * candump can0  (or equivalent, depending on hardware) 
