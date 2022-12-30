@@ -20,7 +20,7 @@ Via CAN you can't see the single cell voltages. I'll probably do an other script
 RS-485 or RS-232 interface in future.
 
 The *dbc is the CAN data description for the can messages on bus. The IDs are in decimal there.
-DBC definition is owned by a company and explanaitions are various but none is really complete
+DBC definition is owned by a company and explanations are various but none is really complete
 it seems. 
 
 For homeassistant's auto-detect of "Devices and Entities" the python script generates the 
