@@ -1,0 +1,30 @@
+#template:
+  - sensor:
+      - name: "battery_power"
+        unit_of_measurement: "W"
+        state: >
+          {% set voltage = states('sensor.battery_battery_voltage') | float %}
+          {% set current = states('sensor.battery_battery_current') | float %}
+          {{ ((voltage * current)) | round(1, default=0) }}
+          
+      - name: "battery_energy"
+        unit_of_measurement: "Wh"
+        state: >
+          {% set soc = states('sensor.battery_soc') | float %}
+          
+          {{ ((soc * 4 * 3500 / 100 )) | round(1, default=0) }}          
+          
+      - name: "battery_voltage_round"
+        unit_of_measurement: "V"        
+        state: >
+          {{ states('sensor.battery_battery_voltage') | float | round(2) }}  
+
+      - name: "battery_current_round"
+        unit_of_measurement: "A"        
+        state: >
+          {{ states('sensor.battery_battery_current') | float | round(2) }}  
+          
+      - name: "battery_temperature_round"
+        unit_of_measurement: "°C"        
+        state: >
+          {{ states('sensor.battery_battery_temperature') | float | round(2) }} 
