@@ -2,8 +2,10 @@
 Get CAN-Messages from Pytontech BMS and send as MQTT to Homeassistant.
 
 I did the scripting for my four Pylontech US3000C polled by a RPi4, but it should work for others, too.
+
 I'm a very beginner regarding python and HA...
 
+# Details
 A small python script listens to the CAN messages, decodes it by using can/cantools and
 a *.dbc file I created from the latest(?) Pylontech documentations and publishes the
 messages as MQTT. It doesn't do any comfort or error handling. You even have to put
@@ -34,6 +36,15 @@ template-sensors in the global template.yaml of HA and used them in the HA card
 I didn't activate the retain-flag in the python up to now since for my understanding 
 this makes it uncomfortable to get rid of the topics when trying things out.
 When the script starts up again (used a service at linux) they are back again, too.
+# File use on converter server
+* pylontech.py  python-script - I placed it at /home/pi/
+* pylontech.dbc can-packet/data description - I placed it at /home/pi/
+* battery.service systemd linux service - placed to /etc/systemd/system/
+
+# File use on ha server
+* template.yaml - after modification of ha.yaml located in main directory, edited with ha's file editor 
+* example.yaml - sniplet from one of my solar dashboards 
+* battery.png - how it looks inside my ha
 
 # Credits
 Direct thanks to the guys who did OpenDTU for the Hoymiles HM-xxxx solar inverters which I studied
