@@ -48,4 +48,5 @@ When the script starts up again (used a service at linux) they are back again, t
 
 # Credits
 Direct thanks to the guys who did OpenDTU for the Hoymiles HM-xxxx solar inverters which I studied
-and used as the example to get the HA integration done.
+and used as the example to get the HA integration done. Many thanks to all the people which made it 
+possible to have this great smart-home solution based on open source.
