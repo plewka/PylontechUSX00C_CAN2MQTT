@@ -1,0 +1,76 @@
+views:
+  - theme: Backend-selected
+    title: Akku
+    path: akku
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Status
+            entities:
+              - entity: sensor.battery_current_round  # changed via template sensor
+              #- entity: sensor.battery_battery_current 
+                name: Battery_Current
+              - entity: sensor.battery_voltage_round  # changed via template sensor
+                name: Battery_Voltage
+              - entity: sensor.battery_temperature_round  # changed via template sensor
+                name: Battery_Temperature
+              - entity: binary_sensor.battery_charge_enable
+                name: Charge_Enable
+              - entity: binary_sensor.battery_discharge_enable
+                name: Discharge_Enable
+              - entity: sensor.battery_power  # added via template sensor
+                name: Battery Power
+              - entity: sensor.battery_soc
+              - entity: sensor.battery_energy   # added via template sensor
+                name: Battery Energy
+              - entity: sensor.battery_soh
+          - type: entities
+            title: Limits
+            entities:
+              - entity: sensor.battery_battery_charge_voltage
+                name: Battery_Charge_Voltage
+              - entity: sensor.battery_charge_current_limitation
+                name: Charge_Current_Limitation
+              - entity: sensor.battery_discharge_current_limitation
+                name: Discharge_Current_Limitation
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Warnung
+            entities:
+              - entity: binary_sensor.battery_warn_internal
+                name: Warn_Internal
+              - entity: binary_sensor.battery_warn_low_temperature
+                name: Warn_Low_Temperature
+              - entity: binary_sensor.battery_warn_high_temperature
+                name: Warn_High_Temperature
+              - entity: binary_sensor.battery_warn_low_voltage
+                name: Warn_Low_Voltage
+              - entity: binary_sensor.battery_warn_high_voltage
+                name: Warn_High_Voltage
+              - entity: binary_sensor.battery_warn_high_current_charge
+                name: Warn_High_Current_Charge
+              - entity: binary_sensor.battery_warn_high_current_discharge
+                name: Warn_High_Current_Discharge
+              - entity: binary_sensor.battery_charge_immediately
+                name: Charge_Immediately
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Alarm
+            entities:
+              - entity: binary_sensor.battery_alarm_internal
+                name: Alarm_Internal
+              - entity: binary_sensor.battery_alarm_under_temperature
+                name: Alarm_Under_Temperature
+              - entity: binary_sensor.battery_alarm_over_temperature
+                name: Alarm_Over_Temperature
+              - entity: binary_sensor.battery_alarm_under_voltage
+                name: Alarm_Under_Voltage
+              - entity: binary_sensor.battery_alarm_over_voltage
+                name: Alarm_Over_Voltage
+              - entity: binary_sensor.battery_alarm_over_current_charge
+                name: Alarm_Over_Current_Charge
+              - entity: binary_sensor.battery_aw_alarm_over_current_discharge
+title: Solar
