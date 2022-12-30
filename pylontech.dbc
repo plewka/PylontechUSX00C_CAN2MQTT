@@ -1,0 +1,97 @@
+VERSION "DBC Pylontech"
+
+NS_ :
+	BA_
+	BA_DEF_
+	BA_DEF_DEF_
+	BA_DEF_DEF_REL_
+	BA_DEF_REL_
+	BA_DEF_SGTYPE_
+	BA_REL_
+	BA_SGTYPE_
+	BO_TX_BU_
+	BU_BO_REL_
+	BU_EV_REL_
+	BU_SG_REL_
+	CAT_
+	CAT_DEF_
+	CM_
+	ENVVAR_DATA_
+	EV_DATA_
+	FILTER
+	NS_DESC_
+	SGTYPE_
+	SGTYPE_VAL_
+	SG_MUL_VAL_
+	SIGTYPE_VALTYPE_
+	SIG_GROUP_
+	SIG_TYPE_REF_
+	SIG_VALTYPE_
+	VAL_
+	VAL_TABLE_
+
+BU_: UC3000C
+
+
+BO_ 773 Inverter_Response: 8 UC3000C
+  SG_ Life                         :  0|1@0+   (1,0)         [0|1]          ""   UC3000C
+
+BO_ 857 BMS_Alarm_Warn: 7 UC3000C
+  SG_ Alarm_Internal               :  11|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Over_Current_Charge    :   8|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Over_Current_Discharge :   7|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Under_Temperature      :   4|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Over_Temperature       :   3|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Under_Voltage          :   2|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Alarm_Over_Voltage           :   1|1@0+  (1,0)         [0|1]          ""   UC3000C
+
+  SG_ Pack_Nr                      :  32|8@1+  (1,0)         [0|255]        ""   UC3000C
+  SG_ Warn_Internal                :  27|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Warn_High_Current_Charge     :  24|1@0+  (1,0)         [0|1]          ""   UC3000C
+
+  SG_ Warn_High_Current_Discharge  :  23|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Warn_Low_Temperature         :  20|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Warn_High_Temperature        :  19|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Warn_Low_Voltage             :  18|1@0+  (1,0)         [0|1]          ""   UC3000C
+  SG_ Warn_High_Voltage            :  17|1@0+  (1,0)         [0|1]          ""   UC3000C
+
+BO_ 849 BMS_DC_Parameter: 8 UC3000C
+  SG_ Battery_Charge_Voltage           :   0|16@1+ (0.1,0)       [0|65.5]       "V"   UC3000C
+  SG_ Charge_Current_Limitation        :  16|16@1- (0.1,0)       [0|100]        "A"   UC3000C
+  SG_ Discharge_Current_Limitation     :  32|16@1- (0.1,0)       [0|100]        "A"   UC3000C
+
+BO_ 853 BMS_State: 4 UC3000C
+  SG_ SOC              :   0|16@1+ (1,0)         [0|100]        "%"   UC3000C
+  SG_ SOH              :  16|16@1+ (1,0)         [0|100]        "%"   UC3000C
+
+BO_ 854 BMS_Battery: 6 UC3000C
+  SG_ Battery_Voltage     :   0|16@1- (0.01,0)      [0|65.5]       "V"   UC3000C
+  SG_ Battery_Current     :  16|16@1- (0.1,0)       [-100|100]     "A"   UC3000C
+  SG_ Battery_Temperature :  32|16@1- (0.1,0)       [-20|100]      "degC"   UC3000C
+
+BO_ 862 BMS_Manufacturer_ASCII: 8 UC3000C
+  SG_ a              :   0|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ b              :   8|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ c              :  16|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ d              :  24|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ e              :  32|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ f              :  40|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ g              :  48|8@1+ (1,0)         [0|255]        ""   UC3000C
+  SG_ h              :  56|8@1+ (1,0)         [0|255]        ""   UC3000C
+
+VAL_ 862 a 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 b 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 c 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 d 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 e 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 f 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 g 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+VAL_ 862 h 32 " " 65 "A" 66 "B" 67 "C" 68 "D" 69 "E" 70 "F" 71 "G" 72 "H" 73 "I" 74 "J" 75 "K" 76 "L" 77 "M" 78 "N" 79 "O" 80 "P" 81 "Q" 82 "R" 83 "S" 84 "T" 85 "U" 86 "V" 87 "W" 88 "X" 89 "Y" 90 "Z";
+
+
+BO_ 860 BMS_Charge: 2 UC3000C
+  SG_ Charge_Enable      :  7|1@1+ (1,0)         [0|1]        ""   UC3000C
+  SG_ Discharge_Enable   :  6|1@1+ (1,0)         [0|1]        ""   UC3000C
+  SG_ Charge_Immediately :  5|1@1+ (1,0)         [0|1]        ""   UC3000C
+ 
+CM_ BU_ UC3000C "Pylontech UC3000C BMS";
