@@ -1,8 +1,8 @@
 # PylontechUSX00C_CAN2MQTT
 Get CAN-Messages from Pytontech BMS and send as MQTT to Homeassistant.
 
-I did it for my four Pylontech US3000C polled by a RPi4, but it should work for others, too.
-I'm a very beginner regarding python and HA.
+I did the scripting for my four Pylontech US3000C polled by a RPi4, but it should work for others, too.
+I'm a very beginner regarding python and HA...
 
 A small python script listens to the CAN messages, decodes it by using can/cantools and
 a *.dbc file I created from the latest(?) Pylontech documentations and publishes the
