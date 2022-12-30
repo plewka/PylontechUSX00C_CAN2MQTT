@@ -10,8 +10,12 @@ messages as MQTT. It doesn't do any comfort or error handling. You even have to 
 the MQTT host into the file (not a parameter).
 
 Pylontech uses CAN with 500.000 bps by default. You can view the CAN messages comming to 
-the interface using candump can0 and don't have to sent anything (or equivalent, 
-depending on hardware). Some Inverters are polling aditional data, mine does not.
+the interface using: 
+
+* sudo ip link set can0 up type can bitrate 500000
+* candump can0  (or equivalent, depending on hardware) 
+
+and don't have to sent anything. Some Inverters are polling aditional data, mine does not.
 Via CAN you can't see the single cell voltages. I'll probably do an other script for
 RS-485 or RS-232 interface in future.
 
