@@ -3,6 +3,14 @@ Get CAN-Messages from Pytontech BMS and send as MQTT to Homeassistant.
 
 I did the scripting for my four Pylontech US3000C polled by a RPi4, but it should work for others, too.
 
+I added a script to sniff RS-485 communication of my FSP/MPP/Infini Hybrid 10k Solar Inverter.
+I'm using the configuration which unfortinately does the main communication
+via the RS-232-Modbus-Link preventing additional Modbus-Master an RS-485:  
+
+* Dual ModBus Box Modbus RTU (P17) Card  
+* PlexLog DataLogger
+* SDM630
+
 I'm a very beginner regarding python and HA...
 
 # Details
